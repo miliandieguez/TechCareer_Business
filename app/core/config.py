@@ -6,6 +6,9 @@ class Settings(BaseSettings):
     api_v1_prefix: str = "/api/v1"
     database_url: str
 
+    # carpeta local para guardar CVs (relativa a la raíz del proyecto)
+    storage_dir: str = "storage"
+
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 
